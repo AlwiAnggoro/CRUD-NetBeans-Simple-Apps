@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="40" bottomMargin="40" uuid="68e3feb1-ebfc-47fd-8085-b8431df83b50">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="516"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2818b04c-421f-4a60-bde5-df8566d3a657"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="nosurat" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tb_cartmou]]>
+	</queryString>
+	<field name="no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nosurat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idproduk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pembeli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nip" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaproduk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spesifikasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlahbarang" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ongkir" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String"/>
+	<field name="totalharga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggaltransaksi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="satuankerja" class="java.lang.String"/>
+	<variable name="pembeli_1" class="java.lang.Integer" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{pembeli}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="465" splitType="Stretch">
+			<staticText>
+				<reportElement x="83" y="-20" width="432" height="31" uuid="68fe3b60-ecf2-4995-840b-0bd909be5345"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CV. ANEKA TANI MAJU MANDIRI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="68" width="515" height="1" uuid="46bc35de-1e04-4cd1-bfea-03568897e385"/>
+				<graphicElement>
+					<pen lineWidth="2.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="83" y="26" width="432" height="15" uuid="75fd9328-d547-4ff8-8092-52bb434ec907"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kode Pos : 34381. Email : cv.anekatanimajumandiri@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="41" width="432" height="15" uuid="e280fb71-028d-4537-86a9-a493fe896a84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telp : 0812 7283 9197 / 0819 3425 0563]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="65" width="515" height="1" uuid="cb1dc2ca-a6d5-4115-ad7a-8c138715f973"/>
+			</line>
+			<image>
+				<reportElement x="3" y="-20" width="80" height="79" uuid="0a86fcbb-a4eb-4460-8b80-d08967c0fc3f"/>
+				<imageExpression><![CDATA["C:\\Users\\alwia\\Documents\\NetBeansProjects\\APK_ATMM\\src\\javaswingdev\\picture\\250.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="83" y="11" width="432" height="15" uuid="89f6a853-8431-40de-a14b-d28848d9a563"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Dusun Bumi Agung RT.012 RW.003 Desa Bumi Harjo Kec. Batanghari Kab. Lampung Timur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="88" width="513" height="18" uuid="a4113159-274f-403a-8851-9a260a4e5832"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SURAT PESANAN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="102" y="145" width="413" height="16" uuid="6a10fcaf-6668-420f-a6c7-f8f1b3a0012d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="2" y="115" width="100" height="76" uuid="d6141e83-f74d-4c4b-a708-af86614795f7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="114" width="100" height="77" uuid="eae77750-dff5-4e11-90cd-a5b2f99afe91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[SURAT PESANAN (SP)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="102" y="115" width="413" height="30" uuid="09b0c427-093b-463f-82b8-e5d39e4207bd"/>
+			</rectangle>
+			<textField>
+				<reportElement x="104" y="146" width="408" height="13" uuid="46fc5e1e-3232-4619-a8fa-654cccec17b4"/>
+				<textElement textAlignment="Justified" markup="none">
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NOMOR. " + $P{nosurat} + " TANGGAL : " + new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggaltransaksi})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="115" width="408" height="29" uuid="3abf1fce-d766-4896-92f5-08b20677bedc"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SATUAN KERJA PEJABAT PENANDATANGAN/PENGESAHAN TANDA BUKTI PERJANJIAN : " + $F{satuankerja}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="102" y="161" width="413" height="30" uuid="4e7684f9-617f-48e1-aec6-ea8a19c01a1c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="104" y="162" width="408" height="29" uuid="a5e20cc3-9383-4bcb-8e8b-842107eb0d3b"/>
+				<textElement textAlignment="Justified" markup="none"/>
+				<textFieldExpression><![CDATA["NAMA PAKET : " + $F{paket}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="206" width="161" height="13" uuid="710e4478-8e30-46dc-81a2-4e2ce08bc04b"/>
+				<text><![CDATA[Yang bertanda tangan di bawah ini : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="247" width="89" height="13" uuid="bc6cf21b-f475-41be-8fc0-0d65aa23b1ec"/>
+				<text><![CDATA[NIP		:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="90" y="230" width="425" height="13" uuid="889c17bf-c213-474c-951f-d67b6afd3e24"/>
+				<textFieldExpression><![CDATA[$F{pembeli}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="90" y="264" width="425" height="13" uuid="0fd17684-ce57-4b65-bd86-3038aef0c9e3"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="90" y="281" width="425" height="13" uuid="25940d47-2f09-4d4b-b93d-b9a1fd25cfe0"/>
+				<textElement textAlignment="Justified">
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="299" width="405" height="13" uuid="8b108185-8c7d-4d83-8f12-ebe7454a4353"/>
+				<text><![CDATA[Selanjutnya disebut sebagai Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="281" width="89" height="13" uuid="baedd514-e413-41da-b9b2-d013c14d6ebc"/>
+				<text><![CDATA[Alamat 		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="230" width="89" height="13" uuid="4ced3fea-d75f-4ead-8dbe-9ad9b7c2337e"/>
+				<text><![CDATA[Nama 		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="264" width="89" height="13" uuid="f516bfca-81f2-4c58-8271-9b157a0e863e"/>
+				<text><![CDATA[Jabatan 		:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="90" y="247" width="425" height="13" uuid="eb0c7814-c8b6-4d21-8899-6589a7d7c5f7"/>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="339" width="130" height="13" uuid="bf347077-38a0-414f-b46e-990de1b12e5f"/>
+				<text><![CDATA[Nama		:  Mustopa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="357" width="335" height="13" uuid="d3c42de2-2925-44b0-b7c3-061dfa33d190"/>
+				<text><![CDATA[Jabatan		:  Direktur CV. ANEKA TANI MAJU MANDIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="375" width="510" height="13" uuid="eb88fb1c-2017-4bc1-9313-8f93778467d0"/>
+				<text><![CDATA[Alamat 		:  Dusun Bumi Agung RT.012 RW.003 Desa Bumi Harjo Kec. Batanghari Kab. Lampung Timur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="2" y="432" width="100" height="13" uuid="82963d47-712b-4b44-acb5-8497a5f1b1e3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RINCIAN BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="393" width="405" height="13" uuid="4f764f89-4e1d-408b-a1b3-ce67d580c505"/>
+				<text><![CDATA[Selanjutnya disebut sebagai penyedia ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="409" width="405" height="13" uuid="b0660524-7ba6-4088-b191-5f567dbd8520"/>
+				<text><![CDATA[Untuk mengirimkan barang dengan memperhatikan ketentuan - ketentuan sebagai berikut ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="446" width="131" height="13" uuid="5046abe4-420d-4780-984e-8b96d5be3faa"/>
+				<textElement markup="none"/>
+				<text><![CDATA[Dengan total transaksi senilai   ]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="135" y="446" width="100" height="13" uuid="e7b6cc20-5126-46f0-8275-53ada437b86c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp. " + $P{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34">
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="0" width="66" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="4dd5c323-0a77-4222-a161-ebbdc363179f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Produk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="68" y="0" width="80" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="230cbe6a-24a3-4708-ae37-374907fafcdf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Produk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="148" y="0" width="70" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="bb2253a1-7ab4-4b10-8dc8-a6d5f2e3711f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Spesifikasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="218" y="0" width="40" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="07fe3a2d-f894-4d52-a0e9-21805c9aa52d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="257" y="0" width="66" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="558e77b7-8152-49ee-8fd7-42c36e6ee44f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biaya Ongkir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="322" y="0" width="64" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="2fa6feec-4396-4c9d-b9d2-21e2434bc498"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="385" y="0" width="66" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="800a952b-3413-4bf5-a4c3-5ef6d7f8c221"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="450" y="0" width="65" height="30" forecolor="#FFFFFF" backcolor="#3A3572" uuid="2e96563d-69e5-41f3-a2d8-bd74a417bf9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Estimasi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="53">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="2" y="1" width="66" height="51" uuid="e87e4989-95fa-4ed3-a1aa-e56f11160c66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idproduk}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="68" y="1" width="80" height="51" uuid="878679a6-bdcc-441c-8654-9c9b94d84fec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namaproduk}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="148" y="1" width="70" height="51" uuid="adcddaa0-bd34-42ba-a61f-f7e8d02d8b98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{spesifikasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="218" y="1" width="40" height="51" uuid="579ce390-5db3-43b2-bba8-c837bceb055b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jumlahbarang}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="257" y="1" width="66" height="51" uuid="7d34e1c4-7769-4bee-9f06-b3c4fb2b8b23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ongkir}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="322" y="1" width="64" height="51" uuid="70066283-c501-4779-8545-a6ed3668fd31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="385" y="1" width="66" height="51" uuid="47fa2dc9-efe9-42fd-8365-d855aeaef8fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalharga}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="450" y="1" width="65" height="51" uuid="26dfe8d0-706c-4e83-b8e5-7fa5cc5eac0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Paling Lambat Tanggal " + new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggaltransaksi})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="204" splitType="Prevent">
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="12" y="40" width="258" height="38" uuid="6f2ac54a-0290-461e-98c2-fc24c92cf835"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Untuk dan Atas Nama Pejabat"+
+"\nPenandatangan/Pengesahan Tanda Bukti Perjanjian" + 
+"\n " + $F{satuankerja}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="331" y="40" width="154" height="38" uuid="ba1b41d8-a259-4b50-b1dc-0f4dec6828bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<text><![CDATA[Untuk dan Atas Nama Penyedia CV. ANEKA TANI MAJU MANDIRI]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="61" y="168" width="159" height="15" uuid="bc1b8223-892b-400d-99fb-560961083098"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pembeli} + 
+"\n" + $F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="331" y="168" width="154" height="15" uuid="a31ecc8e-2e5d-4cfe-9341-494c111dc94a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Mustopa"+
+"\nDirektur"+
+"\nCV. ANEKA TANI MAJU MANDIRI"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="513" height="15" uuid="4ef879a0-6271-4372-bb96-d9d69c78640b"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="SansSerif"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SYARAT DAN KETENTUAN"+
+"\n\n1.  Hak dan Kewajiban"+
+"\na.  Penyedia"+
+"\n     1.  Penyedia  memiliki  hak menerima pembayaran atas pembelian barang sesuai dengan total harga dan waktu"+
+"\n          yang tercantum di dalam SP ini."+
+"\n     2.  Penyedia memiliki kewajiban :"+
+"\n          a.  Menyediakan refraksi benih sebanyak 2% dari total volume  benih  dan  sesuai  dengan  spesifikasi  pada"+ 
+"\n               kontrak;"+
+"\n          b.  Tidak  membuat  dan/atau  menyampaikan  dokumen  dan/atau  keterangan  lain  yang  tidak benar untuk"+ 
+"\n               memenuhi persyaratan Katalog Elektronik;"+
+"\n          c.  Tidak menjual barang  melalui  e-Purchasing  lebih  mahal dari  harga barang  yang  dijual  selain  melalui"+ 
+"\n               e-Purchasing  pada periode penjualan,  jumlah, dan tempat serta  spesifikasi teknis dan persyaratan yang"+ 
+"\n               sama;"+
+"\n          d.  Mengirimkan barang sesuai spesifikasi dalam SP ini selambat lambatnya tanggal " + new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggaltransaksi})+";"+
+"\n          e.  Bertanggungjawab atas keamanan, kualitas, dan kuantitas barang yang dipesan;"+
+"\n           f.  Mengganti barang setelah Pejabat Penandatanganan/Pengesahan  Tanda  Bukti  Perjanjian  melalui  Tim"+
+"\n               Teknis melakukan pemeriksaan barang dan menemukan bahwa :"+
+"\n               1.  Barang rusak akibat cacat produksi;"+
+"\n               2.  Barang rusak pada saat  pengiriman  barang  hingga  barang  diterima  oleh  Pejabat  Penandatangan/"+
+"\n                    Pengesahan Tanda Bukti Perjanjian; dan/atau"+
+"\n               3.  Barang yang diterima tidak sesuai dengan spesifikasi barang sebagaiamana tercantum pada SP ini."+
+"\n          g.  Memberikan layanan purnajual dengan ketentuan garansi masing - masing barang."+
+"\nb.  Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian"+
+"\n     1.  Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian memiliki hak:"+
+"\n          a.  Menerima barang dari Penyedia sesuai dengan spesifikasi yang tercantum dalam SP ini;"+
+"\n          b.  Mendapatkan jaminan keamanan, kualitas, dan kuantitas barang yang dipesan;"+
+"\n          c.  Mendapatkan penggantian barang, dalam hal :"+
+"\n               1.  Barang rusak akibat cacat produksi;"+
+"\n               2.  Barang rusak pada saat  pengiriman  barang  hingga  barang  diterima  oleh  Pejabat  Penandatangan/"+
+"\n                    Pengesahan Tanda Bukti Perjanjian; dan/atau"+
+"\n               3.  Barang yang diterima tidak sesuai dengan spesifikasi barang sebagaiamana tercantum pada SP ini."+
+"\n          d.  Mendapatkan layanan purnajual sesuai dengan ketentuan garansi masing - masing barang."+
+"\n     2.  Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian memiliki kewajiban :"+
+"\n          a.  Melakukan pembayaran sesuai dengan total harga yang tercantum di dalam SP ini;dan"+
+"\n          b.  Memeriksa kualitas dan kuantitas barang;"+
+"\n\n2.  Waktu Pengiriman Barang"+
+"\n     Penyedia mengirimkan barang dan melaksanakan layanan sesuai spesifikasi dalam SP ini  selambat-lambatnya"+
+"\n     pada tanggal " +new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggaltransaksi})+"."+
+"\n\n3.  Alamat Pengiriman Barang"+
+"\n     Penyedia mengirimkan barang ke alamat sebagai berikut:"+
+"\n     "+$F{alamat}+"."+
+"\n\n4.  Tangga Barang Diterima"+
+"\n     Barang diterima selambat lambatnya pada tanggal "+new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggaltransaksi})+"."+
+"\n\n5.  Penerimaan, Pemeriksaan, dan Retur Barang"+
+"\n     a.  Pejabat  Penandatanganan/Pengesahan Tanda Bukti Perjanjian Melalui Tim  Teknis  menerima  barang  dan "+
+"\n          melakukan pemeriksaan barang berdasarkan ketentuan di dalam SP ini."+
+"\n     b.  Dalam  hal ini pada saat pemeriksaan barang, Pejabat Penandatangan/Pengesahan Tanda  Bukti  Perjanjian "+
+"\n          menemukan bahwa :" +
+"\n          1.  Barang rusak akibat cacat Produksi;"+
+"\n          2.  Barang   rusak   pada  saat  pengiriman  barang  hingga  barang  diterima  oleh  Pejabat  Penandatangan/"+
+"\n               Pengesahan Tanda Bukti Perjanjian; dan/atau"+
+"\n          3.  Barang yang diterima  tidak sesuai dengan spesifikasi barang sebagaimana tercantum pada SP ini."+
+"\n          Maka Pejabat Penandatangan/Pengesahan  Tanda Bukti Perjanjian dapat menolak penerimaan barang  dan"+
+"\n          menyampaikan pemberitahuan  tertulis kepada Penyedia atas cacat mutu atau kerusakan barang tersebut."+
+"\n     c.  Pejabat Penandatangan/Pengesahan  Tanda Bukti Perjanjian dapat meminta  Tim  Teknis  untuk  melakukan"+ 
+"\n          pemeriksaan atau uji mutu terhadap barang yang diterima."+
+"\n     d.  Pejabat  Penandatangan/Pengesahan  Tanda   Bukti   Perjanjian   dapat   memerintahkan   Penyedia   untuk"+
+"\n          menemukan dan  mengungkapkan  cacat  mutu  serta melakukan pengujian terhadap barang yang dianggap"+
+"\n          Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian mengandung cacat mutu atau kerusakan."+
+"\n     e.  Penyedia bertanggungjawab atas  cacat  mutu  atau  kerusakan  barang  dengan  memberikan  penggantian"+ 
+"\n          barang selambat-lambatnya 14 (empat belas) hari kerja."+
+"\n\n6.  Harga"+
+"\n     1.  Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian membayar kepada penyedia atas pelaksanaan"+
+"\n          pekerjaan sebesar harga yang tercantum pada SP ini."+
+"\n     2.  Harga SP telah memperhitungkan keuntungan, pajak,  biaya  overhead,  biaya  pengiriman,  biaya  asuransi,"+ 
+"\n          biaya layanan tambahan (apabila ada) dan biaya layanan purna jual."+
+"\n     3.  Rincian harga SP sesuai dengan rincian yang tercantum dalam daftar kuantitas dan harga"+
+"\n\n7.  Perpajakan"+
+"\n     Penyedia  berkewajiban  untuk   membayar  semua  pajak,  bea,  retribusi,  dan  pungutan  lain  yang  sah  yang"+ 
+"\n     dibebankan oleh hukum yang  berlaku atas pelaksanaan SP. Semua pengeluaran perpajakan ini dianggap telah"+ 
+"\n     termasuk dalam harga SP."+
+"\n\n8.  Pengalihan dan/atau subkontrak"+
+"\n     a.  Pengalihan  seluruh  Kontrak  hanya  diperbolehkan  dalam  hal  terdapat  pergantian  nama  Penyedia,  baik"+ 
+"\n          sebagai akibat peleburan (merger), konsolidasi, atau pemisahan."+
+"\n     b.  pengalihan sebagian pelaksanaan Kontrak dilakukan dengan ketentuan sebagai berikut :"+
+"\n          1.  Pengalihan sebagian  pelaksanaan  Kontrak  untuk  barang/jasa  yang  bersifat  standar  dilakukan  untuk"+ 
+"\n               pekerjaan seperti pengiriman barang (distribusi  barang)  dari  Penyedia  kepada  Kementerian/Lembaga/"+
+"\n               Satuan Kerja Perangkat Daerah/Institusi;dan"+
+"\n          2.  Pengalihan   sebagian   pelaksanaan   Kontrak   dapat  dilakukan  untuk  barang/jasa  yang  bersifat  tidak"+ 
+"\n               standar   misalnya   untuk   pekerjaan   konstruksi   (minor),   pengadaan  ambulans,  ready  mix  dan  lain"+ 
+"\n               sebagainya."+
+"\n\n9.  Perubahan SP"+
+"\n     a.  SP hanya dapat diubah melalui adendum SP."+
+"\n     b.  Perubahan  SP  dapat   dilakukan  apabila  disetujui  oleh  para  pihak  dalam  hal  terjadi  perubahan  jadwal"+ 
+"\n          pengiriman  barang  atas  permintaan   Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian  atau"+ 
+"\n          permohonan Penyedia yang disepakati oleh Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian"+
+"\n\n10. Peristiwa Kompensasi"+
+"\n      a.  Peristiwa  kompensasi  dapat  diberika kepada  penyedia  dalam  hal  Pejabat  Penandatangan/Pengesahan"+  
+"\n           Tanda Bukti Perjanjian terlambat melakukan pembayaran prestasi pekerjaan kepada Penyedia."+
+"\n      b.  Pejabat  Penandatangan/Pengesahan   Tanda  Bukti  Perjanjian  dikenakan  ganti  rugi  atas  keterlambatan"+ 
+"\n           pembayaran."+
+"\n\n11. Hak Atas Kekayaan Intelektual"+
+"\n      a.  Penyedia berkewajiban untuk memastikan  bahwa  barang  yang  dikirimkan/dipasok  tidak  melanggar  Hak"+ 
+"\n           Atas Kekayaan Intelektua (HAKI) pihak manapun dan dalam bentuk apapun."+
+"\n      b.  Penyedia berkewajiban untuk menanggung  Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian"+ 
+"\n           dari atau atas semua  tuntutan,  tanggung  jawab,  kewajiban,  kehilangan,  kerugian,  denda,  gugatan  atau"+ 
+"\n           tuntutan hukum, proses pemeriksaan hukum, dan biaya yang dikenakan terhadap Pejabat  Penandatangan/"+ 
+"\n           Pengesahan   Tanda  Bukti  Perjanjian  sehubungan  dengan   klaim   atas   pelanggaran   HAKI,   termasuk"+ 
+"\n           pelanggaran hak cipta, merek  dagang, hak paten, dan bentuk  HAKI  lainnya  yang  dilakukan  atau  diduga"+ 
+"\n           dilakukan oleh Penyedia."+
+"\n\n12. Jaminan Bebas Cacat Mutu"+
+"\n      a.  Penyedia dengan jaminan pabrikan dari produsen pabrikan (jika ada) berkewajiban untuk  menjamin  bahwa"+ 
+"\n           selama  penggunaan  secara  wajar  oleh  Pejabat  Penandatangan/Pengesahan  Tanda   Bukti   Perjanjian,  "+ 
+"\n           Barang tidak mengandung cacat mutu yang disebabkan oleh tindakan atau kelalaian  Penyedia,  atau  cacat"+ 
+"\n           mutu akibat desain, bahan, dan cara kerja."+
+"\n      b.  Pejabat Penandatangan/Pengesahan Tanda  Bukti  Perjanjian  akan  menyampaikan  pemberitahuan  cacat"+ 
+"\n           mutu kepada Penyedia segera setelah ditemukan cacat mutu tersebut selama Masa Layanan Purnajual."+
+"\n      c.  Terhadap pemberitahuan cacat mutu  oleh  Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian,"+ 
+"\n           Penyedia berkewajiban untuk memperbaiki atau mengganti Barang  dalam  jangka  waktu  yang  ditetapkan"+ 
+"\n           dalam pemberitahuan tersebut."+
+"\n\n13. Pembayaran"+
+"\n      a.  Pembayaran prestasi hasil pekerjaan yang disepakati dilakukan oleh  Pejabat  Penandatangan/Pengesahan"+ 
+"\n           Tanda Bukti Perjanjian, dengan ketentuan :"+
+"\n           1.  Penyedia telah mengajukan tagihan;"+
+"\n           2.  Pembayaran dilaukan dengan secara (Termin) diberikan uang  muka  30%  dari  nilai  kontrak, kemudian"+
+"\n                pembayaran (pelunasan)  sebesar  100%  dengan  prestasi  kerja  100%  dari  kewajiban  dalam  kontrak"+ 
+"\n                dikurangi pelunasan uang muka sebesar 30% melalui KPPN Jakarta V; dan"+
+"\n           3.  Pembayaran harus dipotong denda (apabila ada) dan pajak."+
+"\n      b.  Pembayaran  terakhir  hanya  dilakukan  setelah  pekerjaan  selesai  100%  (seratus  perseratus)  dan  bukti"+ 
+"\n           penyerahan pekerjaan diterbitkan."+
+"\n      c.  Pejabat   Penandatangan/Pengesahan   Tanda   Bukti   Perjanjian   melakukan   proses   pembayaran   atas"+ 
+"\n           pembelian barang selambat-lambatnya 14 (empat belas) hari kerja  setelah  PPK  menilai  bahwa  dokumen"+ 
+"\n           pembayaran lengkap dan sah."+
+"\n\n14. Sanksi"+
+"\n      a.  Penyedia dikenakan sanksi apabila :"+
+"\n           1.  Tidak menanggapi pesanan barang selambat-lambatnya 14 (empat belas) hari kerja;"+
+"\n           2.  Tidak dapat memenuhi pesanan sesuai dengan kesepakatan dalam transaksi melalui  e-Purchasing  dan"+ 
+"\n                SP ini tanpa disertai alasan yang dapat diterima; dan/atau"+
+"\n           3.  Menjual barang melalui proses e-Purchasing dengan harga  yang  lebih  mahal  dari  harga  Barang/Jasa"+ 
+"\n                yang dijual selain melalui e-Purchasing pada  periode  penjualan,  jumlah,  dan  tempat  serta  spesifikasi"+
+"\n                teknis dan persyaratan yang sama."+
+"\n      b.  Penyedia yang melakukan perbuatan sebagaimana dimaksud dalam huruf a dikenakan sanksi administratif"+ 
+"\n           berupa:"+
+"\n           1.  Peringatan tertulis;"+
+"\n           2.  Denda; dan"+
+"\n           3.  Pelaporan kepada LKKP untuk dilakukan:"+
+"\n                a.  Penghentian sementara dalam sisten transaksi e-Purchasing; atau"+
+"\n                b.  Penurunan pencantuman dari Katalog Elektronik (e-Catalogue)."+
+"\n      c.  Tata Cara Pengenaan Sanksi"+
+"\n           Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian mengenakan  sanksi  sebagiamana  dimaksud"+ 
+"\n           dalam huruf a dan huruf b berdasarkan ketentuan mengenai  sanksi  sebagaimana  diatur  dalam  Peraturan"+ 
+"\n           Kepala LKPP tentang e-Purchasing."+
+"\n\n15. Penghentian dan Pemutusan SP"+
+"\n      a.  Penghentian SP dapat dilakukan karena pekerjaan sudah selesai atau terjadi Keadaan Kahar."+
+"\n      b.  Pemutusan SP oleh Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian"+
+"\n           1.  Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian dapat melakukan pemutusan SP apabila:"+
+"\n                a.  Kebuthan barang/jasa tidak dapat ditunda melebihi batas berakhirnya SP;"+
+"\n                b.  Berdasarkan penelitian Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian,  Penyedia  tidak"+ 
+"\n                     akan mampu menyelesaikan keseluruhan pekerjaan walaupun diberikan kesempatan sampai  dengan"+
+"\n                     50 (lima puluh) hari kalender sejak masa berakhirnya  pelaksanaan  pekerjaan  untuk  menyelesaikan"+ 
+"\n                     pekerjaan;"+
+"\n                c.  Setelah diberikan kesempatan menyelesaikan pekerjaan sampai dengan 50 (lima puluh) hari kalender"+ 
+"\n                     sejak masa berakhirnya pelaksanaan pekerjaan, Penyedia  Barang/Jasa  tidak  dapat  menyelesaikan"+ 
+"\n                     pekerjaan;"+
+"\n                d.  Penyedia lalai/cidera janji dalam melaksanakan  kewajibannya  dan  tidak  memperbaiki  kelalaiannya"+
+"\n                     dalam jangka waktu yang telah ditetapkan;"+
+"\n                e.  Penyedia terbukti melakukan KKN, kecurangan dan/atau pemalsuan dalam proses  Pengadaan  yang"+ 
+"\n                     diputuskan oleh instansi yang berwenang; dan/atau"+
+"\n                 f.  Pengaduan tentang penyimpangan prosedur, dengan KKN  dan/atau  pelanggaran  persaingan  sehat"+
+"\n                     dalam pelaksanaan pengadaan dinyatakan benar oleh instansi yang berwenang."+
+"\n           2.  Pemutusan SP sebagaimana dimaksud pada angka 1 dilakukan  selambat-lambatnya  14  (empat  belas)"+ 
+"\n                hari   kerja   setelah   Pejabat   Penandatangan/Pengesahan   Tanda   Bukti  Perjanjian    menyampaikan"+ 
+"\n                pemberitahuan rencana pemutusan SP secara tertulis kepada Penyedia."+
+"\n      c.  Pemutusan SP oleh Penyedia"+
+"\n           1.  Penyedia dapat melakukan pemutusan Kontrak jika terjadi hal-hal sebagai berikut:"+
+"\n                a.  Akibat keadaan kahar sehingga Penyedia tidak dapat melaksanakan pekerjaan sesuai  ketentuan  SP"+ 
+"\n                     atau adendum SP;"+
+"\n                b.  Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian   gagal   mematuhi   keputusan   akhir"+ 
+"\n                     penyelesaian perselisihan; atau"+
+"\n                c.  Pejabat    Penandatangan/Pengesahan    Tanda   Bukti    Perjanjian    tidak     memenuhi     kewajiban"+ 
+"\n                     sebagaimana dimaksud dalam SP atau adendumm SP."+
+"\n           2.  Pemutusan SP sebagaimana dimaksud pada angka 1 dilakukan  selambat-lambatnya  14  (empat  belas)"+ 
+"\n                hari  kerja  setelah  Penyedia  menyampaikan  pemberitahuan  rencana  pemutusan  SP   secara  tertulis"+ 
+"\n                kepada Pejabat Penandatangan/Pengesahan Tanda Bukti Perjanjian."+
+"\n\n16. Denda Keterlambatan Pelaksanaan Pekerjaan"+
+"\n      Penyedia yang terlambat menyelesaikan pekerjaan dalam jangka waktu sebagaimana  ditetapkan dalam SP ini"+ 
+"\n      karena kesalahan Penyedia, dikenakan denda keterlambatan sebesar 1/100  (satu perseribu)  dari  total  harga"+ 
+"\n      atau dari sebagian total harga sebagaimana tercantum dalam SP ini untuk setiap hari keterlambatan."+
+"\n\n17. Keadaan Kahar"+
+"\n      a.  Keadaan Kahar adalah suatu keadaan yang terjadi diluar kehendak para pihak dan tidak dapat  diperkirakan"+ 
+"\n           sebelumnya, sehingga kewajiban yang ditentukan dalam SP menjadi tidak dapat dipenuhi."+
+"\n      b.  Dalam hal terjadi Keadaan Kahar, Penyedia  memberitahukan  tentang  terjadinya  Keadaan  Kahar  kepada"+ 
+"\n           Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian   secara   tertulis   dalam   waktu   selambat-"+
+"\n           lambatnya 14 (empat belas) hari kalender sejak  terjadinya  Keadaan  Kahar  yang  dikeluarkan  oleh  pihak/"+
+"\n           instansi yang berwenang sesuai ketentuan peraturan perundang-undangan."+
+"\n      c.  Tidak termasuk Keadaan Kahar adalah hal-hal merugikan yang disebabkan  oleh  perbuatan  atau  kelalaian"+ 
+"\n           para pihak."+
+"\n      d.  Keterlambatan pelaksanaan pekerjaan yang diakibatkan terjadinya Keadaan Kahar tidak dikenakan sanksi."+
+"\n      e.  Setelah terjadinya  Keadaan  Kahar,  para  pihak  dapat  melakukan  kesepakatan,  yang  dituangkan  dalam"+ 
+"\n           perubahan SP."+
+"\n\n18. Penyelesaian Perselisihan"+
+"\n      Pejabat  Penandatangan/Pengesahan  Tanda  Bukti  Perjanjian  dan  Penyedia  berkewajiban  untuk  berupaya"+
+"\n      sunguh-sungguh menyelesaikan secara damai semua perselisihan yang timbul dari atau berhubungan  dengan"+ 
+"\n      SP  ini  atau  interpretasinya  selama  atau  setelah  pelaksanaan  pekerjaan.   Jika   perselisihan   tidak   dapat"+ 
+"\n      diselesaikan secara musyawarah maka perselisihan  akan  diselesaikan  melalui  arbitrase,  mediasi,  konsiliasi"+ 
+"\n      atau pengadilan negeri dalam wilayah hukum Republik Indonesia."+
+"\n\n19. Larangan Pemberian Komisi"+
+"\n      Penyedia menjamin bahwa tidak satupun personil  satuan  kerja  Pejabat  Penandatangan/Pengesahan  Tanda"+ 
+"\n      Bukti Perjanjian telah atau akan menerima komisi dalam bentuk apapun (gratifikasi) atau keuntungan  tidak sah"+ 
+"\n      lainnya baik langsung maupun tidak langsung  dari  SP  ini.  Penyedia  menyetujui  bahwa  pelanggaran  syarat"+ 
+"\n      ini merupakan pelanggaran yang mendasar terhadap SP ini."+
+"\n\n20. Masa Berlaku SP"+
+"\n      SP  ini  berlaku  sejak  tanggal  SP  ini  ditandatangani  oleh  pihak  sampai  dengan   selesainya   pelaksanaan"+ 
+"\n      pekerjaan."+
+"\n\nDemikian SP ini dibuat dan ditandatangani dalam 2 (dua) rangkap bermaterai dan masing-masing memiliki kekuatan hukum yang sama."]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

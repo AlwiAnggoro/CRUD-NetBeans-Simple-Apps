@@ -1,0 +1,18 @@
+127.0.0.1/db_cvatmm/tb_login/		http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=db_cvatmm&table=tb_login
+
+   Menampilkan baris 0 -  8 (total 9, Pencarian dilakukan dalam 0,0037 detik.)
+
+
+SELECT * FROM `tb_login`
+
+
+no	id	username	password hak_akses	tanggal	
+1	ADM0001	Pak Bos		1234	 penuh		2024-05-13	
+2	OPR0001	Mas Operator	1234	 terbatas	2024-05-13	
+3	OPR0002	OP2		1234	 terbatas	2024-05-13	
+4	OPR0003	OP3		1234	 terbatas	2024-05-13	
+5	OPR0004	OP4		1234	 terbatas	2024-05-13	
+6	OPR0005	OP5		1234	 terbatas	2024-05-14	
+7	OPR0006	OP6		1234	 terbatas	2024-05-14	
+8	OPR0007	OP7		1234	 terbatas	2024-05-14	
+9	OPR0008	OP8		1234	 terbatas	2024-05-14	
